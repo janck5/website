@@ -1,0 +1,21 @@
+@font-face {
+    font-family: bryant_font;
+    src: local(bryant_font), url('images/bryant-medium.ttf') format('opentype');
+}
+html {
+    width:100%;
+    height: 100%;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    font-family: bryant_font;
+    font-size:15px;
+} 
+
+body {
+    background-color:rgb(167,168,56);
+}
+
+#imgContain {
+
+   background-color: white;
+}
