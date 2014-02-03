@@ -1,21 +1,26 @@
 @font-face {
     font-family: bryant_font;
-    src: local(bryant_font), url('images/bryant-medium.ttf') format('opentype');
+    src: local(bryant_font), url('./images/bryant-medium.ttf') format('opentype');
 }
 html {
-    width:100%;
+    width:80%;
     height: 100%;
     margin: 0 0 0 0;
     padding: 0 0 0 0;
     font-family: bryant_font;
-    font-size:15px;
+    font-size: 14px;
 } 
 
 body {
-    background-color:rgb(167,168,56);
+    background-color:rgb(167,168,56); //green/brown color
+    //background-color:rgb(105,48,108); // purple color  
 }
 
-#imgContain {
-
-   background-color: white;
+#userInput {
+    font-size: 1.4em;
+    position: relative;
+    top: 100px;
+    left: 200px;
+    color: #6b316e;
+    font-weight: bold;
 }
