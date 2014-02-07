@@ -5,6 +5,21 @@
         <meta charset="utf-8" />
         <title>Ozone House Client Assessment</title>
         <link href="mainStyleSheet.css" rel="stylesheet" type="text/css">
+        <script>
+			function displayClient()
+			{
+				if (document.getElementById("Client").checked == true)
+				{
+					document.getElementById("client_login_info").style.display = 'block';
+					document.getElementById("worker_login_info").style.display = 'none';
+					}
+				if (document.getElementById("Worker").checked == true)
+				{
+					document.getElementById("worker_login_info").style.display = 'block';
+					document.getElementById("client_login_info").style.display = 'none';
+					}
+		   }
+		</script>
     </head>
     <body>
     
@@ -13,20 +28,16 @@
         <br><br>
             
         <div id="userInput">
-            <form>
+           <form>
                 <div style="font-size:  1.6em; width: 50%;position: absolute; left: 25%">
-                    <input type="radio" name="user_type" id="Client"> Client
-                    <input type="radio" name="user_type" id="Worker"> Worker
+                    <input type="radio" name="user_type" id="Client" onclick="displayClient()"> Client
+                    &nbsp&nbsp&nbsp&nbsp
+                    <input type="radio" name="user_type" id="Worker" onclick="displayClient()"> Worker
                 </div>
+            </form>  
                 <br><br><br>
-                <script>
-                //    function displayClient()
-                //    {
-                       // if (document.getElementById("Client").Checked)
-                   //         document.getElementById("client_login_info").style.visibility = "visible";
-                 //   }
-                </script>
-                <div id="client_login_info" >
+           <form>    
+                <div id="client_login_info" style="display: none">
                     &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Enter Login: <input type="text" name="userlogin"><br><br>
                     Birthdate (MMYY): <input type="text" name="bdate">
                     <br><br>
@@ -67,11 +78,18 @@
                       </select>
             <br><br>
                     <input type="submit" value="Submit">
-
                 </div>
-      </form>
-    </div> 
-  </div> <!-- container -->
+			</form>
+            <form>
+				<div id="worker_login_info" style="display: none">
+                    Enter Login: <input type="text" name="userlogin"><br><br>
+                    Password: <input type="text" name="pswd">
+            <br><br>
+                    <input type="submit" value="Submit">
+                </div>
+			</form>
+        </div> <!-- user input -->
+    </div> <!-- container -->
 </body>
 
 </html>
